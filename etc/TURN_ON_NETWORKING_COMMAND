@@ -1,0 +1,4 @@
+RG002
+40
+<DATA>
+modprobe g_ether host_addr='EE4900081A07' dev_addr='EE1900081A07'
