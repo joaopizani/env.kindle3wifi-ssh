@@ -19,5 +19,6 @@ rsync \
     --archive --no-owner --no-group --copy-links \
     --size-only --delete --progress \
     --exclude='*.dir*' --exclude='*fuse_hidden*'  \
+    --human-readable --log-file=${LOGFILE} \
     ${LOCAL_PATH} ${REM_PATH}
 
