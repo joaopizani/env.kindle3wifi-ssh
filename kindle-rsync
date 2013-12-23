@@ -20,5 +20,5 @@ rsync \
     --size-only --delete --progress \
     --exclude='*.dir*' --exclude='*fuse_hidden*'  \
     --human-readable --log-file="${LOGFILE}" \
-    ${LOCAL_PATH} ${REM_PATH}
+    "${LOCAL_PATH}"  "${REM_PATH}"
 
