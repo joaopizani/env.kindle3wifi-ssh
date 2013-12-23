@@ -4,7 +4,7 @@ SCRIPT_NAME="kindle-rsync"
 
 DIR="$(cd -P "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LOGDIR="${DIR}/logs/${SCRIPT_NAME}"
-mkdir -p ${LOGDIR}
+mkdir -p "${LOGDIR}"
 
 LOGDATE=$(date '+%Y-%m-%d_%H-%M-%S')
 LOGNAME="log_${SCRIPT_NAME}__${LOGDATE}.txt"
@@ -19,6 +19,6 @@ rsync \
     --archive --no-owner --no-group --copy-links \
     --size-only --delete --progress \
     --exclude='*.dir*' --exclude='*fuse_hidden*'  \
-    --human-readable --log-file=${LOGFILE} \
+    --human-readable --log-file="${LOGFILE}" \
     ${LOCAL_PATH} ${REM_PATH}
 
