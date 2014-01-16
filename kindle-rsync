@@ -11,10 +11,12 @@ LOGNAME="log_${SCRIPT_NAME}__${LOGDATE}.txt"
 LOGFILE="${LOGDIR}/${LOGNAME}"
 
 
-KINDLE_ADDR="alexialan"
+KINDLE_ADDR_DEFAULT="alexialan"
+KINDLE_ADDR_="${KINDLE_ADDR:-$KINDLE_ADDR_DEFAULT}"
+
 LOCAL_PATH_DEFAULT="${HOME}/Text/portable/"
-LOCAL_PATH=${1:-$LOCAL_PATH_DEFAULT}
-REM_PATH="${KINDLE_ADDR}:/mnt/us/DK_Documents"
+LOCAL_PATH="${1:-$LOCAL_PATH_DEFAULT}"
+REM_PATH="${KINDLE_ADDR_}:/mnt/us/DK_Documents"
 
 rsync \
     --archive --no-owner --no-group --copy-links \
