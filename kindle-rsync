@@ -14,7 +14,7 @@ LOGFILE="${LOGDIR}/${LOGNAME}"
 KINDLE_ADDR_DEFAULT="hostalexialan"
 KINDLE_ADDR_="${KINDLE_ADDR:-$KINDLE_ADDR_DEFAULT}"
 
-LOCAL_PATH_DEFAULT="${HOME}/data/text/text-portable/"
+LOCAL_PATH_DEFAULT="${HOME}/priv/text/text-portable/"
 LOCAL_PATH="${1:-$LOCAL_PATH_DEFAULT}"
 REM_PATH="${KINDLE_ADDR_}:/mnt/us/DK_Documents"
 
